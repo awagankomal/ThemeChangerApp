@@ -3,17 +3,55 @@
     <head>
         <title>Theme Change Application </title>
         <style>         
+  h1,p{
+                text-align: center;
+            }
+            .app_container{
+              
+                flex-direction: row;
+                margin: 0px auto;
+                border: none;
+                border-radius: 3px;
+                width:570px;
+                height:400px;
+                
+                
+            }
+            .food_style{
+                height: 300px;
+                width:573px;
+                align-items: center;
+                align-content: center;
+                margin: 0px auto;
+                
+             }
+             .toggle_btn{
+                 
+                  margin-top:20px;
+				  margin-left:80px;
+                  padding: 10px 30px;
+                  color:black;
+                  background-color: rgb(255, 115, 0);
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+             }
+             .toggle_btn:hover{
+                box-shadow: 0 0  2px 2px rgb(240, 193, 165);
+                color:white;
+             }
 
         </style>
     </head>
     <body>
 	    <h1>Theme Changer Page  </h1>
-        <p>This is a demo that showcases the 'Theme Change' plugin in action ðŸ˜Š</p>
+        <p>This is a demo that showcases the 'Theme Change' plugin in action </p>
         <div class="app_container">
         
         <img src="./Images/Product-Categories-Snacks2.jpg" class="food_style" id="food_img"/>
-        <button type="button" class="toggle_btn" id="toggle_btn" onclick="ShowBiscuits()">Biscuits and Snacks</button>
+        <button type="button" class="toggle_btn" id="toggle_btn" onclick="ShowBiscuits()">Biscuits</button>
 		<button type="button" class="toggle_btn" id="toggle_btn" onclick="ShowSamosa()">Samosa</button>
+		
     </div>
     </body>
 </html>
