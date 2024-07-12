@@ -28,7 +28,7 @@
              .toggle_btn{
                  
                   margin-top:20px;
-				  margin-left:80px;
+				  margin-left:120px;
                   padding: 10px 30px;
                   color:black;
                   background-color: rgb(255, 115, 0);
@@ -40,10 +40,31 @@
                 box-shadow: 0 0  2px 2px rgb(240, 193, 165);
                 color:white;
              }
+			 .theme-chg{
+			    position: fixed
+			 }
+			 .theme_btn{
+			    top:5px;
+				left:5px;
+				padding: 10px 10px;
+                color:black;
+                background-color: #FFEEA9;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+			 }
+			.bg-color{
+			  background-color:#FFD7BE;
+			}
+			 
 
         </style>
     </head>
-    <body>
+    <body class="bg-color">
+	    <div class="theme-chg">
+		    <button type="button" class="theme_btn" id="light_theme_btn" onclick="ShowBiscuits()">Light</button>
+		<button type="button" class="theme_btn" id="dark_theme_btn" onclick="ShowSamosa()">Dark</button>
+		</div>
 	    <h1>Theme Changer Page  </h1>
         <p>This is a demo that showcases the 'Theme Change' plugin in action </p>
         <div class="app_container">
