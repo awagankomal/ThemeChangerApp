@@ -36,7 +36,7 @@
                   border-radius: 5px;
                   cursor: pointer;
              }
-             .toggle_btn:hover{
+             .toggle_btn:hover, .theme_btn:hover{
                 box-shadow: 0 0  2px 2px rgb(240, 193, 165);
                 color:white;
              }
@@ -53,26 +53,63 @@
                 border-radius: 4px;
                 cursor: pointer;
 			 }
-			.bg-color{
-			  background-color:#FFD7BE;
+			.bg_light{
+			  background:#FFD7BE;
 			}
+			.bg_dark{
+			   background:#16213E;
+			}
+			
 			 
 
         </style>
     </head>
-    <body class="bg-color">
+    <body id="main_body">
 	    <div class="theme-chg">
-		    <button type="button" class="theme_btn" id="light_theme_btn" onclick="ShowBiscuits()">Light</button>
-		<button type="button" class="theme_btn" id="dark_theme_btn" onclick="ShowSamosa()">Dark</button>
+		    <button type="button" class="theme_btn" id="light_theme_btn" onclick="lightThemeAction()">Light</button>
+		<button type="button" class="theme_btn" id="dark_theme_btn" onclick="darkThemeAction()">Dark</button>
 		</div>
 	    <h1>Theme Changer Page  </h1>
         <p>This is a demo that showcases the 'Theme Change' plugin in action </p>
         <div class="app_container">
         
         <img src="./Images/Product-Categories-Snacks2.jpg" class="food_style" id="food_img"/>
-        <button type="button" class="toggle_btn" id="toggle_btn" onclick="ShowBiscuits()">Biscuits</button>
-		<button type="button" class="toggle_btn" id="toggle_btn" onclick="ShowSamosa()">Samosa</button>
+        <button type="button" class="toggle_btn" id="biscuit_btn" onclick="showBiscuits()">Biscuits</button>
+		<button type="button" class="toggle_btn" id="samosa_btn" onclick="showSamosa()">Samosa</button>
 		
     </div>
+	<script>
+	
+	    function showBiscuits(){
+              const btnElement = document.getElementById('food_img');
+			      
+                      btnElement.src="./Images/Product-Categories-Snacks2.jpg"
+				  
+
+           }
+		   
+		 function showSamosa(){
+              const btnElement = document.getElementById('food_img');
+              btnElement.src= "./Images/Samosa.jpg"
+                  
+
+           }
+		 function lightThemeAction(){
+		    const themeBtn = document.getElementById("main_body");
+			themeBtn.classList.remove("bg_dark");
+			themeBtn.classList.add("bg_light");
+		 }
+		  function darkThemeAction(){
+		    
+		    const themeBtn = document.getElementById("main_body");
+			console.log("dark themeenter");
+			themeBtn.classList.remove("bg_light");
+			themeBtn.classList.add("bg_dark");
+			console.log("dark theme close");
+		 }
+		   
+
+	
+	</script>
     </body>
 </html>
